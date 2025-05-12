@@ -41,6 +41,7 @@ import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.Random;
 
 public class Server implements Hello {
 
@@ -48,6 +49,10 @@ public class Server implements Hello {
 
     public String sayHello() {
         return "Hello, world!";
+    }
+
+    public int luckyNumber(){
+        return random.nextInt(11);
     }
 
     public static void main(String args[]) {
