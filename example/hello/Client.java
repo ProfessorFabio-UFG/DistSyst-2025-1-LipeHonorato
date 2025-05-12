@@ -56,6 +56,8 @@ public class Client {
             System.out.println("Found server");
             String response = stub.sayHello();
             System.out.println("response: " + response);
+            String response = stub.luckyNumber();
+            System.out.println("response: Seu número da sorte é " + response);
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
