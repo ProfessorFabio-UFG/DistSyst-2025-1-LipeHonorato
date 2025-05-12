@@ -52,8 +52,7 @@ public class Server implements Hello {
     }
 
     public int luckyNumber(){
-        public Random random;
-        random = new Random();
+        Random random = new Random();
         return random.nextInt(11);
     }
 
