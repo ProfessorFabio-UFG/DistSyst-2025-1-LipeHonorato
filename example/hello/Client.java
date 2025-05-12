@@ -57,7 +57,7 @@ public class Client {
             String response = stub.sayHello();
             System.out.println("response: " + response);
             int response2 = stub.luckyNumber();
-            System.out.println("response: Seu número da sorte é " + response);
+            System.out.println("response: Seu número da sorte é " + response2);
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
