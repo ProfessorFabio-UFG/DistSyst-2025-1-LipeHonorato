@@ -56,6 +56,14 @@ public class Server implements Hello {
         return random.nextInt(11);
     }
 
+    public int sum2numbers(int a, int b){
+        return a + b;
+    }
+
+    public int sub2numbers(int a, int b){
+        return a - b;        
+    }
+
     public static void main(String args[]) {
 
         try {
