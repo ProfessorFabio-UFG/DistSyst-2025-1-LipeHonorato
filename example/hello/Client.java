@@ -39,6 +39,7 @@ package example.hello;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Random;
 
 public class Client {
 
@@ -52,12 +53,30 @@ public class Client {
         try {
             Registry registry = LocateRegistry.getRegistry(host);
             System.out.println("Registry has been located");
+
             Hello stub = (Hello) registry.lookup("Hello");
             System.out.println("Found server");
+
             String response = stub.sayHello();
             System.out.println("response: " + response);
+
             int response2 = stub.luckyNumber();
             System.out.println("response: Seu número da sorte é " + response2);
+
+            Random random = new Random();
+            int a = random.nextInt(10);
+            int b = random.nextInt(10);
+
+            int response3 = stub.sum2numbers(a, b);
+            System.out.println("response: Soma de " + a + " e " + b + " é igual a: " + response3);
+            
+            a = random.nextInt(10);
+            b = random.nextInt(10);
+
+            int response4 = stub.sub2numbers(a, b);
+            System.out.println("response: Subtração de " + a + " e " + b + " é igual a: " + response4);
+
+
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
