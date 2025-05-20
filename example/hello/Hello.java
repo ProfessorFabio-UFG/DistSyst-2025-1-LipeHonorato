@@ -43,4 +43,6 @@ import java.rmi.RemoteException;
 public interface Hello extends Remote {
     String sayHello() throws RemoteException;
     int luckyNumber() throws RemoteException;
+    int sum2numbers(int a, int b) throws RemoteException;
+    int sub2numbers(int a, int b) throws RemoteException;
 }
